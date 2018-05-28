@@ -215,3 +215,5 @@ a.jskq_tita{ background:url(../images/admin_tabtit2.png) no-repeat 0 0; width:25
 .rensel ul li.cur{ color:#4cc3ca;}
 .rensel.twosel .scrollbox{ height:320px;}
 .qky_tit{ background:#d7ecca; border-radius:4px 4px 0 0; color:#81be16; font-weight:bold;}
+
+.hd{ position: absolute; width: 15px; height: 15px; border-radius: 50%; background: #f14141; top: -7px; right: -7px; z-index: 66;}

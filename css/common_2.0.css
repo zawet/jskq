@@ -80,7 +80,7 @@ textarea,input{ outline:none;}
 .ycfile {position: absolute;width: 100%;height: 100%;left: 0;top: 0;filter: alpha(opacity=0);opacity: 0;z-index: 66;cursor: pointer;}
 .hbtl{ text-decoration:underline;}
 .box_b{ box-sizing:border-box;}
-
+.po_r{ position: relative;}
 
 /*文字水平*/
 .t_r{ text-align:right!important;}
@@ -221,8 +221,12 @@ textarea,input{ outline:none;}
 .ml8{ margin-left:8px!important;}
 .mr6{ margin-right:6px!important;}
 .ml6{ margin-left:6px!important;}
+.mr4{ margin-right:4px!important;}
+.ml4{ margin-left:4px!important;}
 .mr2{ margin-right:2px!important;}
 .ml2{ margin-left:2px!important;}
+.mr0{ margin-right:0px!important;}
+.ml0{ margin-left:0px!important;}
 
 
 .mt26{ margin-top:26px!important;}
@@ -237,6 +241,8 @@ textarea,input{ outline:none;}
 .mb6{ margin-bottom:6px!important;}
 .mt2{ margin-top:2px!important;}
 .mb2{ margin-bottom:2px!important;}
+.mt0{ margin-top:0px!important;}
+.mb0{margin-bottom: 0!important;}
 
 
 /*百分比宽度*/

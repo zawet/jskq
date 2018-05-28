@@ -42,7 +42,9 @@
 .qkysel .selshow.inp.hicon .timeicon{ position:absolute; width:32px; height:32px; top:0; right:0; text-align:center; z-index:12;}
 .qkysel .selshow.inp.hicon .u_d{position:absolute; width:32px; height:32px; top:0; right:0; text-align:center; z-index:12;}
 .qkysel .selshow.inp.hicon .u_d i{ display:block; text-align:center; font-size:14px; line-height:16px;}
-.qkysel .selshow.inp input[type='text'],.qkysel .selshow.inp input[type='date']{ background:none; border:none;  font-size:14px; width:100%; position:relative; z-index:11; font-family: Arial,Microsoft YaHei;}
+.qkysel .selshow.inp input[type='text'],
+.qkysel .selshow.inp input[type='date'],.qkysel .selshow.inp textarea
+{ background:none; border:none;  font-size:14px; width:100%; position:relative; z-index:11; font-family: Arial,Microsoft YaHei;}
 .qkysel .selshow a.selectON{ width:85%; padding-right:15%; display:block;}
 .qkysel .optionbox{ position:absolute; width:100%; top:100%; left:-1px;  display:none; z-index:666;}
 .qkysel .upsel .optionbox{ top:auto; bottom:100%;}
@@ -239,6 +241,8 @@
 .qkybut.fhbg:hover,.qkybut.hbg.cur{box-shadow:0 1px 4px #ddd; background:#8acb1a; border-color:#8acb1a;}
 .qkybut.zi{background:#7d3cb5; color:#fff;border-color:#7d3cb5;}
 .qkybut.zi:hover,.qkybut.hbg.cur{box-shadow:0 1px 4px #ddd; background:#681ea8; border-color:#681ea8;}
+.qkybut.un{background:#dd3559; color:#fff;border-color:#dd3559;}
+.qkybut.un:hover,.qkybut.un.cur{box-shadow:0 1px 4px #ddd; background:#b11d3d; border-color:#b11d3d;}
 
 .qkybut.lk{ border-color:#e6e6e6; background:#fff;color:#666; }
 .qkybut.lk.fan{border-color:#00bb9a; color:#00bb9a;}

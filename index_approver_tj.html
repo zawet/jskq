@@ -48,8 +48,9 @@
         <a class="trn fz_16">周表</a>
         <a class="trn fz_16">月表</a>
         <a class="trn fz_16">学期表</a>
+        <a class="trn fz_16">部门统计</a>
         </div>
-    	<div class="xskq_navs" style=" padding:16px 50px;">
+    	<div class="xskq_navs" style=" padding:16px;">
         
         
         <div class="qkysel mb16 fl tab">
@@ -106,15 +107,44 @@
             </div>
             <div class="clear"></div>   
         </div>
-        <div class="qkyinp mb16 M fr">
+        <div class="qkysel mb16 fl tab yc">
+                <div class="seltxt fl  co_gr fz_16">考勤日期：</div>
+                <div class="selshow fl M inp hicon">
+                    <input type="text"  class="caldate fz_18" id="oneday">
+                    <a class="timeicon"><i class="appicon">&#xe607;</i></a>
+                    <div class="qky_calendar"></div>
+                </div>
+                <div class="selshow fl M inp hicon ml4">
+                        <input type="text"  class="caldate fz_18" id="oneday">
+                        <a class="timeicon"><i class="appicon">&#xe607;</i></a>
+                        <div class="qky_calendar"></div>
+                    </div>
+                <div class="clear"></div>   
+            </div>
+            
+            <div class="qkysel fl ml16 clear3 tabs yc">
+                    <div class="seltxt fl co_gr">部门：</div>
+                    <div class="selshow fl S">
+                        <a class="selectON dian3" id="ks_type">所有</a>
+                        <div class="optionbox">
+                            <a class="option trn dian3" value="所有">所有</a>
+                            <a class="option trn dian3" value="教务处">教务处</a>
+                            <a class="option trn dian3" value="总务处">总务处</a>
+                            <a class="option trn dian3" value="学生处">学生处</a>
+                        </div>
+                    </div>
+                    <a href="#" class="qkybut hbg brra_4 auto fl ml8">搜索</a>
+                </div>
+        <a href="#" class="qkybut hbg zi brra_4 auto fr ml8">导出报表</a>
+        <div class="qkyinp mb16 M fr tabs">
             <div class="fl inptext"><input type="text" placeholder="请输入教师姓名" class="wd_96 ml10"></div>
             <div class="fl inpbut"><a><i class="appicon co_gr">&#xe60c;</i></a></div>
             <div class="clear"></div>
         </div>
-        
+        <div class="clear"></div> 
         
        
-         <table cellpadding="0" cellspacing="0" border="0"  class="qkytable qian_color">
+         <table cellpadding="0" cellspacing="0" border="0"  class="qkytable qian_color tjtab">
                 <tr><th>编号</th><th>姓名</th><th >迟到</th><th>请假</th><th>早退</th><th>旷课</th></tr>
                 <tr><td class="one">1</td><td>蔡勇剑</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
                 <tr class="even"><td class="one">2</td><td>陈启</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
@@ -130,7 +160,13 @@
                 <tr class="even"><td class="one">12</td><td>吴泳芝</td><td>1</td><td>3</td><td>1</td><td>0</td></tr>
                 <tr><td class="one">13</td><td>杨鹏</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
                 <tr class="even"><td class="one">总计</td><td>总结</td><td>20</td><td>13</td><td>15</td><td>6</td></tr>
-				</table>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0"  class="qkytable qian_color tjtab yc">
+                    <tr><th>编号</th><th>部门</th><th >迟到</th><th>请假</th><th>早退</th><th>旷课</th></tr>
+                    <tr><td class="one">1</td><td>学生处</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr class="even"><td class="one">2</td><td>教务处</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td class="one">3</td><td>总务处</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>   
+                </table>
            <div class="qkypage mt16">
                 <a href="#" class="no">上一页</a>
                 <a href="#" class="cur">1</a>
@@ -158,7 +194,18 @@ $(function() {
         $(this).click(function(){
 		 $(".tab.qkysel").addClass("yc");
 		 $(this).addClass("cur").siblings().removeClass("cur");
-		 $(".tab.qkysel").eq(i).removeClass("yc");
+         $(".tab.qkysel").eq(i).removeClass("yc");
+         if(i==4){
+            $(".tabs").eq(0).removeClass("yc");
+            $(".tabs").eq(1).addClass("yc");
+            $(".tjtab").eq(1).removeClass("yc");
+            $(".tjtab").eq(0).addClass("yc");
+         }else{
+            $(".tabs").eq(1).removeClass("yc");
+            $(".tabs").eq(0).addClass("yc");
+            $(".tjtab").eq(0).removeClass("yc");
+            $(".tjtab").eq(1).addClass("yc");
+         }
 		});
     });
 });
