@@ -174,7 +174,7 @@ textarea,input{ outline:none;}
 /*内边距*/
 .pa_16{ padding:16px!important;}
 .pa_14{ padding:14px!important;}
-.pa_12{ padding:12px;!important;}
+.pa_12{ padding:12px !important;}
 .pa_tb12{ padding:12px 0!important;}
 .pa_tb14{ padding:14px 0!important;}
 .pa_tb16{ padding:16px 0!important;}

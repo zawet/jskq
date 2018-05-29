@@ -45,6 +45,8 @@
 .qkysel .selshow.inp input[type='text'],
 .qkysel .selshow.inp input[type='date'],.qkysel .selshow.inp textarea
 { background:none; border:none;  font-size:14px; width:100%; position:relative; z-index:11; font-family: Arial,Microsoft YaHei;}
+.qkysel .selshow.txt{ border: none; background: none;}
+.qkysel .selshow.txt textarea{ padding: 10px; margin: 0; box-sizing: border-box; border: 1px solid #f1f1f1; width: 100%; display: block;}
 .qkysel .selshow a.selectON{ width:85%; padding-right:15%; display:block;}
 .qkysel .optionbox{ position:absolute; width:100%; top:100%; left:-1px;  display:none; z-index:666;}
 .qkysel .upsel .optionbox{ top:auto; bottom:100%;}

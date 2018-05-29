@@ -74,7 +74,7 @@
                                     <th>申诉考勤时间</th>
                                     <th>考勤类型</th>
                                     <th>请假原因</th>
-                                    <th>请假状态</th>
+                                    
                                     <th>申诉内容</th>
                                     <th>审核状态</th>
                                     <th>操作</th>
@@ -84,27 +84,29 @@
                                     <td >2018/05/01 08:00:00</td>
                                     <td>迟到</td>
                                     <td>因为生病</td>
-                                    <td>无</td>
+                                    
                                     <td>当天有请假，忘记补流程了，请更正，谢谢。</td>
                                     <td class="co_or">未审核</td>
-                                     <td><a class="qkybut auto brad4 hbg mr4">通过</a><a class="qkybut auto brad4 hbg un">不通过</a></td>
+                                     <td><a class="qkybut auto brad4 hbg mr4" onclick="popIn('#eaitkq')" >通过</a>
+                                        <a class="qkybut auto brad4 hbg un" onclick="popIn('#passmsg')">不通过</a></td>
                                 </tr>
                                 <tr>
                                     <td class="one">1</td><td>刘小弟</td>
                                         <td class="one">2018/05/01 08:00:00</td>
                                         <td>迟到</td>
                                         <td>因为生病</td>
-                                        <td>无</td>
+                                        
                                         <td>当天有请假，忘记补流程了，请更正，谢谢。</td>
                                         <td class="co_or">未审核</td>
-                                         <td><a class="qkybut auto brad4 hbg mr4 ">通过</a><a class="qkybut auto brad4 hbg un">不通过</a></td>
+                                         <td><a class="qkybut auto brad4 hbg mr4 " onclick="popIn('#eaitkq')">通过</a>
+                                            <a class="qkybut auto brad4 hbg un" onclick="popIn('#passmsg')">不通过</a></td>
                                     </tr>
                                     <tr>
                                             <td class="one">1</td><td>刘小弟</td>
                                                 <td class="one">2018/05/01 08:00:00</td>
                                                 <td>迟到</td>
                                                 <td>因为生病</td>
-                                                <td>无</td>
+                                                
                                                 <td>当天有请假，忘记补流程了，请更正，谢谢。</td>
                                                 <td class="co_gr">通过</td>
                                                  <td></td>
@@ -114,7 +116,7 @@
                                                         <td class="one">2018/05/01 08:00:00</td>
                                                         <td>迟到</td>
                                                         <td>因为生病</td>
-                                                        <td>无</td>
+                                                        
                                                         <td>当天有请假，忘记补流程了，请更正，谢谢。</td>
                                                         <td class="co_red">不通过</td>
                                                          <td></td>
@@ -142,10 +144,104 @@
 <div>广东全通教育股份有限公司  版权所有  ©2007-2015</div>
 </div>
 
+<!--删除提示-->
+<div class="qky_maskbox" id="passmsg" >
+        <div class="qky_maskbg"></div>
+        <div class="qky_maskmian L">
+            <div class="qky_masktit"><span id="titname">提示</span><a class="maskclose" onClick="popOut('#passmsg')"><i class="appicon">&#xe60a;</i></a></div>
+            <div class="qky_maskcont pa_lr16 pt16">
+                <i class="appicon" id="msgicon">&#xe610;</i>
+                <div id="msgtxt">是否不通过?</div>
+                <div class="t_c mb26">
+                <a class="qkybut hbg brad4 M  mr16" onClick="popOut('#passmsg')"><i class="appicon mr6">&#xe609;</i>确定</a>
+                <a class="qkybut hbg brad4 M" onClick="popOut('#passmsg')"><i class="appicon mr6">&#xe60a;</i>取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--修改信息-->
+<div class="qky_maskbox" id="eaitkq">
+        <div class="qky_maskbg"></div>
+        <div class="qky_maskmian XXL">
+            <div class="qky_masktit">修改信息<a class="maskclose" onClick="popOut('#eaitkq')"><i class="appicon">&#xe60a;</i></a></div>
+            <div class="qky_maskcont pa_lr16 pt16">
+                <div class="qkysel  fl mb16">
+                    <div class="seltxt fl dingw co_gr">学生姓名：</div>
+                    <div class="selshow fl L inp ba_f1  co_z9">冬瓜糖</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="qkysel  fr mb16">
+                    <div class="seltxt fl dingw co_gr">科目：</div>
+                    <div class="selshow fl L inp ba_f1 co_z9">历史</div>
+                    <div class="clear"></div>
+                </div>
+            
+                <div class="qkysel  fl mb16">
+                    <div class="seltxt fl dingw co_gr">时间：</div>
+                    <div class="selshow fl L inp hicon">
+                        <input type="text"  class="caldate" id="etime">
+                        <a class="timeicon"><i class="qkyicon">&#xe709;</i></a>
+                        <div class="qky_calendar"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+                <div class="qkysel  fl mb16">
+                    <div class="seltxt fl dingw co_gr">连续天数：</div>
+                    <div class="selshow fl L inp"><input type="text" value="" placeholder="11"></div>
+                    <span class="fl">（包含节假日，系统自动添加缺勤消息）</span>
+                    <div class="clear"></div>
+                </div>
+                
+                <div class="qkysel fl mb16">
+                    <div class="seltxt fl co_gr">缺勤原因：</div>
+                    <div class="selshow fl L">
+                        <a class="selectON dian3" id="ks_type">请假——病假</a>
+                        <div class="optionbox">
+                            <a class="option trn dian3" value="请假——病假">请假——病假</a>
+                            <a class="option trn dian3" value="请假——事">请假——事假</a>
+                            <a class="option trn dian3" value="请假——婚假">请假——婚假</a>
+                            <a class="option trn dian3" value="请假——产假">请假——产假</a>
+                            <a class="option trn dian3" value="请假——丧假">请假——丧假</a>
+                            <a class="option trn dian3" value="请假——年假">请假——年假</a>
+                            <a class="option trn dian3" value="请假——调休">请假——调休</a>
+                            <a class="option trn dian3" value="迟到——有事">迟到——有事</a>
+                            <a class="option trn dian3" value="迟到——生病">迟到——生病</a>
+                            <a class="option trn dian3" value="早退——有事">早退——有事</a>
+                            <a class="option trn dian3" value="早退——生病">早退——生病</a>
+                            <a class="option trn dian3" value="旷课——有事">旷课——有事</a>
+                            <a class="option trn dian3" value="旷课——生病">旷课——生病</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="qkysel fr mb16">
+                    <div class="seltxt fl co_gr">请假状态：</div>
+                    <div class="selshow fl L">
+                        <a class="selectON dian3" id="ks_type">所有</a>
+                        <div class="optionbox">
+                             <a class="option trn dian3" value="无">无</a>
+                            <a class="option trn dian3" value="初二1班">流转中</a>
+                            <a class="option trn dian3" value="初二2班">完结-同意请假</a>
+                            <a class="option trn dian3" value="初二3班">完结-不同意请假</a>
+                            <a class="option trn dian3" value="初二4班">所有</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="t_c mb26 mt16">
+                <a class="qkybut hbg brad4 M  mr16"><i class="appicon mr6">&#xe609;</i>提交</a>
+                <a class="qkybut hbg brad4 M"><i class="appicon mr6">&#xe617;</i>返回</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 <script language="JavaScript" charset="utf-8" src="js/qky_ui.js"></script>
 <script>
  $(function() {
-            qkysel();
+            qkysel();calendar(".timeicon",".qky_calendar",0,1,1);//日历启动 点击的元素，容器元素
 });
 </script>
 </body>
